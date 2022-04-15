@@ -1,0 +1,16 @@
+﻿<EditForm Model="@Review" OnValidSubmit="@SubmitAsync">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <ul>
+        <li>
+            <label for="title">Title:</label><InputText id="title" @bind-Value="Review.Title" />
+        </li>
+        <li>
+            <label for="rating">Rating:</label><InputNumber id="rating" @bind-Value="Review.Rating" />
+        </li>
+        <li>
+            <button>Add</button>
+        </li>
+    </ul>
+</EditForm>
+

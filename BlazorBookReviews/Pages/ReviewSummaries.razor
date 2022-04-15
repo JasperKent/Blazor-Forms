@@ -1,0 +1,25 @@
+﻿@page "/reviewsummaries"
+
+<h3>Review Summaries</h3>
+<table>
+    <thead>
+        <tr>
+            <th>
+               Title
+            </th>
+            <th>
+               Rating
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var summary in Summaries)
+        {
+          <tr>
+              <td>@summary.Title</td>
+              <td>@($"{summary.Rating:N2}")</td>
+          </tr>
+        }
+    </tbody>
+</table>
+

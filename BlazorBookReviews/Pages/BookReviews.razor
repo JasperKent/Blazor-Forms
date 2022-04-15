@@ -1,0 +1,32 @@
+﻿@page "/bookreviews"
+
+<h3>Book Reviews</h3>
+
+<button @onclick="()=>ShowAdd = true" disabled="@ShowAdd">Add Review</button>
+
+@if (ShowAdd)
+{
+    <AddReview Added="ReviewAdded"></AddReview>
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>
+               Title
+            </th>
+            <th>
+               Rating
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var review in Reviews)
+        {
+          <tr>
+              <td>@review.Title</td>
+              <td>@review.Rating</td>
+          </tr>
+        }
+    </tbody>
+</table>
